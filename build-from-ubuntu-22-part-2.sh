@@ -7,7 +7,8 @@ sudo apt-get install -y --no-install-recommends intel-mkl-64bit-2020.0-088
 git clone https://github.com/marian-nmt/marian
 cd marian/
 mkdir build
-CC=/usr/bin/gcc-9 CXX=/usr/bin/g++-9 CUDAHOSTCXX=/usr/bin/g++-9 cmake ..  \
+cd build
+CC=/usr/bin/gcc-11 CXX=/usr/bin/g++-11 CUDAHOSTCXX=/usr/bin/g++-11 cmake ..  \
   -DBoost_ARCHITECTURE=-x64 \
   -DCMAKE_BUILD_TYPE=Slim \
   -DCOMPILE_CPU=on \
